@@ -1,6 +1,6 @@
 
-#Extra Practice for this course
+#Extra Practice for this course.
 
-#Created a second 8 sieded dice that functions exactly like the original 6 sided dice of our app.
+#Created a second 8 sided dice that functions exactly like the original 6 sided dice of our App.
 
-#Both dices roll at the same time by pressing the same button.
+#Both dice roll at the same time by pressing the same button.
