@@ -14,12 +14,14 @@ class MainActivity : AppCompatActivity() {
 
         val rollButton: Button = findViewById(R.id.button)
         rollButton.setOnClickListener {
-            Toast.makeText(this, "Good Luck! Dice Rolled!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Good Luck! Dices Rolled!", Toast.LENGTH_SHORT).show()
             rollDice()
+            rollDice2()
         }
 
         // Do a dice roll when the app starts
         rollDice()
+        rollDice2()
     }
 
     /** This function will set the number of sides on our dice and when roll will be excecuted will show
@@ -45,6 +47,27 @@ class MainActivity : AppCompatActivity() {
 
         // Update the content description
         diceImage.contentDescription = diceRoll.toString()
+    }
+
+    private fun rollDice2() {
+        val dice2 = Dice(8)
+        val diceRoll2 = dice2.roll()
+        val diceImage: ImageView = findViewById(R.id.imageView2)
+
+        val drawableResourse = when (diceRoll2) {
+            1 -> R.drawable._8side_dice__side1
+            2 -> R.drawable._8side_dice__side2
+            3 -> R.drawable._8side_dice__side3
+            4 -> R.drawable._8side_dice__side4
+            5 -> R.drawable._8side_dice__side5
+            6 -> R.drawable._8side_dice__side6
+            7 -> R.drawable._8side_dice__side7
+            else -> R.drawable._8side_dice__side8
+        }
+
+        diceImage.setImageResource(drawableResourse)
+
+        diceImage.contentDescription = diceRoll2.toString()
     }
 }
 
