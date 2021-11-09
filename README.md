@@ -2,7 +2,7 @@
 
 Welcone to my first series of Kotlin android projects.
 
-This one follows Google course of learning the basics of Kotlin programming languge,
+This one follows Google course of learning the basics of Kotlin programming language,
 by creating an android studio application that rolls a dice. 
 
 Yes, gambling basics🤑
