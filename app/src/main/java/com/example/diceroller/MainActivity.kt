@@ -1,3 +1,5 @@
+@file:Suppress("SpellCheckingInspection")
+
 package com.example.diceroller
 
 import android.os.Bundle
@@ -24,16 +26,16 @@ class MainActivity : AppCompatActivity() {
         rollDice2()
     }
 
-    /** This function will set the number of sides on our dice and when roll will be excecuted will show
+    /** This function will set the number of sides on our dice and when roll will be execute will show
     a dice image with the result.**/
     private fun rollDice() {
         val dice = Dice(6)
         val diceRoll = dice.roll()
         val diceImage: ImageView = findViewById(R.id.imageView)
 
-        // We are using a when condition into a variable to check what our roll function rolled and then asign
+        // We are using a when condition into a variable to check what our roll function rolled and then assign
         // the proper image for our dice.
-        val drawableResourse = when (diceRoll) {
+        val drawableResource = when (diceRoll) {
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
             3 -> R.drawable.dice_3
@@ -43,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Update the ImageView with the correct drawable resource ID
-        diceImage.setImageResource(drawableResourse)
+        diceImage.setImageResource(drawableResource)
 
         // Update the content description
         diceImage.contentDescription = diceRoll.toString()
